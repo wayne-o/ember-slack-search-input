@@ -38,7 +38,7 @@ export default Component.extend({
     if (currentIndex !== -1) {
       let item = list.objectAt(currentIndex);
       let token = get(this, 'token');
-      run.schedule('sync', this, function() {
+      run.schedule('actions', this, function() {
         this.attrs.changeTokenModel(token, item, true);
       });
     }
